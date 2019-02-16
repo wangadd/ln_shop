@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                        <a href="/movie">在线订座</a>
                 </div>
             </div>
         </div>

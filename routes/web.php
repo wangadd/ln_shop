@@ -14,7 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/info', function () {
+   phpinfo();
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//在线订坐
+Route::get('/movie','Movie\MovieController@index');
+Route::get('/test','Movie\MovieController@test');
+Route::get('/domovie/{key}','Movie\MovieController@doMovie');
+
+
+//微信测试
+Route::get('/weixin/valid','Weixin\WxController@valid');
+Route::post('/weixin/valid','Weixin\WxController@valid');
+
+
